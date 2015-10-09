@@ -3,16 +3,6 @@
 
 Wikidata is a project by the Wikimedia foundation. It’s purpose is to support other Wikimedia projects (e.g. Wikipedia and Wikimedia Commons but also 3rd party projects) by providing structured data for use in the Wikipedia infobox for example. All data is community generated and maintained and published under a free licence (creative commons 1.0). All data is inherently multilingually available and can be universally used across many platforms.
 
-\todo[noline, inline, color=blue!20]{Explaining how it works}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\textwidth]{Figures/statement.png}
-	\caption{\textit{Composition of an Item}: This diagram shows the structure of an \textit{item} in \textit{Wikidata}}
-\end{figure}
-
-Most objects in the database consist of items. Items have descriptions and labels which have statements. These statements have properties which hold a value and qualifiers Every item statement of an item should have references.
-
 
 it’s a secondary \todo[fancyline, color=blue!20]{insert this somehow} database because it also stores sources to all objects
 
@@ -20,6 +10,15 @@ it’s a secondary \todo[fancyline, color=blue!20]{insert this somehow} database
 Wikidata currently (07.10.15) has 14,883,343 entries. This broad database isn’t as heavily utilized as hoped for by the organisation and its community. This is most likely caused by a multitude of reasons which possibly include the lack of usability of the data integration and editing functions and their visibility.
 
 
+
+
+
+Items have
+descriptions and labels
+which have statements
+a claim which has 
+a property a value and qualifiers
+and references 
 
 
 

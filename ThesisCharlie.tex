@@ -1,6 +1,7 @@
 \documentclass[a4paper, 11pt, oneside]{Thesis}
 \graphicspath{Figures/}
 
+\usepackage{todonotes}
 \usepackage{natbib}
 \usepackage{verbatim}
 \usepackage{graphicx}
@@ -11,7 +12,7 @@
 \usepackage{color}
 \usepackage{tabto}
 \usepackage{hyperref}
-\usepackage[svgnames]{xcolor}
+%\usepackage[svgnames]{xcolor}
 
 \definecolor{dkblue}{rgb}{0,0,.6}
 
@@ -21,7 +22,7 @@
 %\usepackage{glossaries}
 
 
-\usepackage{ifxetex,ifluatex}
+\usepackage{ifxetex,ifluatex} 
 \usepackage{etoolbox}
 
 
@@ -63,7 +64,7 @@
 	\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
 
 % select a colour for the shading
-\colorlet{shadecolor}{Azure}
+%\colorlet{shadecolor}{Azure}
 
 \newcommand*\shadedauthorformat{\emph} % define format for the author argument
 
@@ -123,6 +124,7 @@
 \thispagestyle{plain}
 
 Abstract goes here
+\todo{bla} %this is how you use todo
 
 \vspace{\fill}
 }
