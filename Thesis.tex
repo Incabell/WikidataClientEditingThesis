@@ -1,0 +1,238 @@
+\documentclass[a4paper, 11pt, oneside]{Thesis}
+\graphicspath{Figures/}
+
+\usepackage{natbib}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{sidecap}
+\usepackage{listings}
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tabto}
+\usepackage{hyperref}
+\usepackage[svgnames]{xcolor}
+
+\definecolor{dkblue}{rgb}{0,0,.6}
+
+
+\bibliographystyle{plainnat}
+\hypersetup{colorlinks = true, citecolor = black, linkcolor=black, urlcolor = black}
+%\usepackage{glossaries}
+
+
+\usepackage{ifxetex,ifluatex}
+\usepackage{etoolbox}
+
+
+\usepackage{tikz}
+
+\usepackage{framed}
+
+% conditional for xetex or luatex
+\newif\ifxetexorluatex
+\ifxetex
+\xetexorluatextrue
+\else
+\ifluatex
+\xetexorluatextrue
+\else
+\xetexorluatexfalse
+\fi
+\fi
+%
+\ifxetexorluatex%
+\usepackage{fontspec}
+\usepackage{libertine} % or use \setmainfont to choose any font on your system
+\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O} % selects Libertine as the quote font
+\else
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[T1]{fontenc} % or any other font package like libertine
+\newcommand*\quotefont{\fontfamily{LinuxLibertineT-LF}} % selects Libertine as the quote font
+\fi
+
+\newcommand*\quotesize{60} % if quote size changes, need a way to make shifts relative
+% Make commands for the quotes
+\newcommand*{\openquote}
+{\tikz[remember picture,overlay,xshift=-4ex,yshift=-2.5ex]
+	\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+\newcommand*{\closequote}[1]
+{\tikz[remember picture,overlay,xshift=4ex,yshift={#1}]
+	\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+
+% select a colour for the shading
+\colorlet{shadecolor}{Azure}
+
+\newcommand*\shadedauthorformat{\emph} % define format for the author argument
+
+% Now a command to allow left, right and centre alignment of the author
+\newcommand*\authoralign[1]{%
+	\if#1l
+	\def\authorfill{}\def\quotefill{\hfill}
+	\else
+	\if#1r
+	\def\authorfill{\hfill}\def\quotefill{}
+	\else
+	\if#1c
+	\gdef\authorfill{\hfill}\def\quotefill{\hfill}
+	\else\typeout{Invalid option}
+	\fi
+	\fi
+	\fi}
+% wrap everything in its own environment which takes one argument (author) and one optional argument
+% specifying the alignment [l, r or c]
+%
+\newenvironment{shadequote}[2][l]%
+{\authoralign{#1}
+	\ifblank{#2}
+	{\def\shadequoteauthor{}\def\yshift{-2ex}\def\quotefill{\hfill}}
+	{\def\shadequoteauthor{\par\authorfill\shadedauthorformat{#2}}\def\yshift{2ex}}
+	\begin{snugshade}\begin{quote}\openquote}
+		{\shadequoteauthor\quotefill\closequote{\yshift}\end{quote}
+	\end{snugshade}}
+
+
+\begin{document}
+\frontmatter
+
+
+\title  {{\Huge Bachelor Title}}
+\authors  {\texorpdfstring
+            {Charlene Kritschmar}{}
+          }
+\addresses  {\groupname\\\deptname\\\univname}
+\date       {\today}
+\subject    {}
+\keywords   {}
+
+\maketitle
+
+\setstretch{1.3}  
+
+\fancyhead{} 
+\rhead{}
+\cfoot{\thepage}
+\pagestyle{fancy} 
+
+\clearpage 
+
+\addtotoc{Abstract} 
+\abstract{
+\thispagestyle{plain}
+
+Abstract goes here
+
+\vspace{\fill}
+}
+
+\clearpage  
+
+\acknowledgements{
+	\thispagestyle{plain}
+	
+	{\large Acknowledgements go here}
+	
+	\vspace{\fill}
+}
+
+\clearpage  
+
+
+\setstretch{1.3} 
+
+\pagestyle{fancy}
+
+\rhead{\emph{Table of Contents}}
+\addtotoc{Table of Contents}
+\tableofcontents
+
+
+\mainmatter	
+\pagestyle{fancy}  
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\rhead{\leftmark}
+\input{Chapters/Introduction} 
+
+\addtocontents{toc}{\vspace{1em}} 
+
+%\glsaddallunused
+%\printglossary
+%\addcontentsline{toc}{chapter}{Glossary}
+
+\newpage
+
+\listoffigures
+\rhead{\emph{List of Figures}}
+\label{Bibliography}
+\rhead{\emph{Resources}}
+{\small
+%\bibliography{Bibliography}
+}
+\addcontentsline{toc}{chapter}{Bibliography}
+\clearpage
+
+\addtocontents{toc}{\vspace{1.5em}} 
+
+\appendix
+\addtocontents{toc}{\def\string\@dotsep{5000}}
+\rhead{\emph{Appendix}}
+\pagenumbering{gobble}
+
+\addtocontents{toc}{%
+	\protect\vspace{1em}% 
+	\protect\noindent \textbf{Appendix}\protect\par
+	\protect\vspace{1em}%
+}
+\lstset{
+	tabsize			= 2,
+	numbers			= left,
+	breaklines		= true,
+	language        = XML,
+	basicstyle		= \scriptsize\ttfamily,
+	keywordstyle    = \color{dkblue},
+	stringstyle     = \color{red},
+	identifierstyle = \color{black},
+	commentstyle    = \color{DarkGreen},
+	emph            =[1]{php},
+	emphstyle       =[1]\color{black},
+	emph            =[2]{if,and,or,else},
+	emphstyle       =[2]\color{dkblue},
+	morekeywords	={TokenInterface},
+}
+
+\clearpage
+
+\addtocontents{toc}{\vspace{1.5em}}
+
+\Declaration{	
+	I, Charlene Kritschmar, declare that this thesis titled, "Bachelor Title" and the work presented in it are my own. I confirm that:
+	
+	\begin{itemize}  
+		\item[\tiny{$\blacksquare$}] Where I have consulted the published work of others, this is always clearly attributed.
+		
+		\item[\tiny{$\blacksquare$}] Where I have quoted from the work of others, the source is always given. With the exception of such quotations, this thesis is entirely my own work.
+		
+		\item[\tiny{$\blacksquare$}] I have acknowledged all main sources of help.
+		\item[\tiny{$\blacksquare$}] Where the thesis is based on work done by myself jointly with others, I have made clear exactly what was done by others and what I have contributed myself.
+		\\
+	\end{itemize}
+	\bigskip
+	\bigskip
+	\bigskip
+	\bigskip
+	\bigskip
+	\bigskip
+	\bigskip
+	\bigskip
+	\bigskip
+	\bigskip
+	
+	Signed:\\
+	\rule[1em]{25em}{0.5pt}  
+	
+	Date:\\
+	\rule[1em]{25em}{0.5pt}  
+}
+\end{document}
