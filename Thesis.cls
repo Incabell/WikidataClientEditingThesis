@@ -193,7 +193,7 @@
       \bigskip
       \bigskip
       \bigskip
-    {\Large Abgabe goes here \par}
+    {\Large 18. January 2016 \par}
     \end{center} 
 	\bigskip
 	\bigskip
@@ -237,7 +237,7 @@
     \bigskip
     {\huge{\textit{Abstract}} \par}
     \medskip
-    {\normalsize\bf Bacherlot title goes here \par}
+    {\normalsize\bf Facilitating the use of Wikidata in Wikimedia projects with a user-centered design approach \par}
     \medskip
     {\normalsize by \authornames \par}
     \bigskip

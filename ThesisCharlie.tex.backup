@@ -123,11 +123,10 @@
 \abstract{
 \thispagestyle{plain}
 
-This thesis aims to develope a concept using user-centered design to improve the editing of Wikidata from a client. Using various tools from the field of usability and design thinking it will aim to create an approach that will result in both an improved user experience and an easy implelemtation for the software development team. 
+This thesis aims to develope a concept using user-centered design to improve the editing of Wikidata from a client. Using various tools from the field of usability and design thinking I will aim to create 
 
-For this thesis the approach will be selected according to the outcome after evaluating the community/user-generated input. 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend, dolor a aliquet euismod, felis massa commodo nisi, a malesuada metus nisl ac turpis. Donec sit amet pellentesque erat. Aenean mi purus, sollicitudin at ligula vel, malesuada semper dolor. Vivamus vel purus nec dolor maximus porta. Phasellus eu nunc vel erat varius congue. Integer tortor lacus, pretium eget luctus sit amet, molestie a metus. Donec pellentesque vestibulum diam, et finibus enim convallis at. Cras facilisis placerat dolor non viverra. Phasellus tincidunt nisi et enim euismod, sed condimentum leo placerat. Suspendisse mollis nulla sed est hendrerit, in cursus ligula volutpat. Nulla et diam id urna malesuada facilisis. Nullam blandit dapibus mauris, vitae vulputate tellus commodo placerat. 
+\todo{bla} %this is how you use todo
 
 \vspace{\fill}
 }
@@ -137,7 +136,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend, 
 \acknowledgements{
 	\thispagestyle{plain}
 	
-	{\large Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend, dolor a aliquet euismod, felis massa commodo nisi, a malesuada metus nisl ac turpis. Donec sit amet pellentesque erat. Aenean mi purus, sollicitudin at ligula vel, malesuada semper dolor. Vivamus vel purus nec dolor maximus porta. Phasellus eu nunc vel erat varius congue. Integer tortor lacus, pretium eget luctus sit amet, molestie a metus.}
+	{\large Acknowledgements go here}
 	
 	\vspace{\fill}
 }
