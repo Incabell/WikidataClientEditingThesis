@@ -1,0 +1,17 @@
+\chapter{Requirements Analysis}
+
+\section{Status Quo Analysis}
+
+Creating a concept for an editing tool requires an understanding of the editing process and the capabilites of the system it will be implemented on. This is neccesary in order to develope a feasable and functional tool for most efficient use. 
+
+All the editing work is written in the Wiki markup language called Wikitext. It is a markup language that is then converted by wiki software to HTML. Since 2012 some Wikipedias offer the use of the VisualEditor. This is a rich-text editor with a more user-friendly GUI. It can represent the statements of the respective infobox and allows for a selection of statements. The values of the statements are still written in wikitext but the infobox itself is premade and the editor doesn't have to know the appropriate statements for the article. 
+
+In its current state, there is no implementation of the Wikidata item with the article. In the best case they are linked, in the worst case they are not or there is even no item to this article yet. Currently the usage of the items information is only possible when knowing the exact wikitext and the rules of implementing Winformation from Wikidata. This leads to an under average amount of usage of the items because most editors do not know the specific rules of implementation and the documentation on it is bad if available at all. 
+
+This leads to the current situation where the Items are rarely, if at all used to populate the infobox so the editors rather add all the information manually.
+
+\clearpage
+\section{Functional Requirements}
+
+\section{Non-Functional Requirements}
+

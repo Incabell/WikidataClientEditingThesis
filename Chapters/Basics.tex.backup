@@ -1,0 +1,13 @@
+\chapter{Basics}
+
+\section{Wikidata}
+
+Every \textit{item} on Wikidata has a \textit{label} by which it can be identified and a unique item number that looks something like this \textit{Q12345}. Throughout this thesis I will use the example of the item Douglas Adams (Q42). Every \textit{item} can also have diambiguitions or alternative names that it might be known under. As for example in Adam's case this is Douglas Noele Adams, including his middle name. A description can be added to every item, as in Adam's case this is 'English writer and humorist'. Every \textit{item} has a list of \textit{statements} about that item. For a person this could be gender, parents, first and last name, date of birth, sex, siblings, occupation, children and so forth. These are called \textit{properties} which have \textit{values} and potentially a \textit{qualifier}. So for example the \textit{statement} with the \textit{property} last name has Adams as a \textit{value}. If we look at the spouse \textit{property} we see that the \textit{value} is \textit{Jane Belson}. This \textit{value} has \textit{qualifiers} to specify when exactly this \textit{statement} was true. In the case of Adams' spouse it is a start time and an end time. Every \textit{property} can have multiple \textit{values}. For example one can have multiple spouses or multiple children. These don't have to be mutually exclusive. This whole package is then called a \textit{claim}. Every \textit{value} of a \textit{statement} should preferably have a \textit{reference} to back the \textit{claim} that was made. 
+
+Other noteworthy things are that an \textit{item} links all articles of all alnguages together. The \textit{items} are not bound by languages
+
+\clearpage
+\section{Functional Requirements}
+
+\section{Non-Functional Requirements}
+
